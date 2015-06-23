@@ -43,7 +43,7 @@
 
   
 
-  <script data-cfasync="false" src="https://vietnam.blinktrade.com/assets/js/bitex_app_blink_trade.compiled.vi.whitedev.js?v=dbce41a" type="text/javascript"></script>
+  <script data-cfasync="false" src="https://vietnam.blinktrade.com/assets/js/bitex_app_blink_trade.compiled.vi.whitedev.js?v=f296612" type="text/javascript"></script>
 </head>
 <body class=" ws-not-connected bitex-not-logged active-view-start ">
 
@@ -62,7 +62,7 @@
                         <ul>
                         <li><a href="" data-switch-view="profile" role="option">Hồ sơ</a></li>
                         <li><a href="" data-switch-view="trading" role="option">Mua và Bán</a></li>
-                        <li><a href="" data-switch-view="offerbook" role="option">Sổ khớp lệnh</a></li>
+                        <li><a href="" data-switch-view="offerbook" role="option">Sổ lệnh</a></li>
                         <li><a href="javascript:location.reload()" role="option">Thoát</a></li>
                         </ul>
                     </nav>
@@ -123,7 +123,7 @@
             <table style="display:inline-block">
                 <tr>
                     <td class="bitex-display-if-logged">
-                        <a href="" data-switch-view="trading" class="ls-tooltip-bottom" aria-label="Mua hoặc Bán"><i data-switch-view="trading" class="ls-ico-stats"> </i></a>
+                        <a href="" data-switch-view="trading" class="ls-tooltip-bottom" aria-label="Mua và Bán"><i data-switch-view="trading" class="ls-ico-stats"> </i></a>
                     </td>
                     <td>
                         <a href="" data-switch-view="market" class="ls-tooltip-bottom" aria-label="Thị trường"><i data-switch-view="market" class="ls-ico-chart-bar-up"> </i></a>
@@ -179,7 +179,7 @@
             <ul>
                 <li><a href="" data-switch-view="profile" role="option">Hồ sơ</a></li>
                 <li><a href="" data-switch-view="trading" role="option">Mua và Bán</a></li>
-                <li><a href="" data-switch-view="offerbook" role="option">Sổ khớp lệnh</a></li>
+                <li><a href="" data-switch-view="offerbook" role="option">Sổ lệnh</a></li>
             </ul>
             <a href="javascript:location.reload()" class="ls-btn-logout" role="combobox" aria-expanded="false">Sair</a>
         </nav>
@@ -219,7 +219,7 @@
             <li><a href="" data-switch-view="profile" class="ls-ico-user" role="menuitem" style="outline: none;">Hồ sơ</a></li>
             <li class=""><a href="" data-switch-view="my_broker" class="ls-ico-info" role="menuitem" style="outline: none;"> Về sàn giao dịch</a></li>
             <li><a href="" data-switch-view="trading" class="ls-ico-docs" role="menuitem">Mua và Bán</a></li>
-            <li><a href="" data-switch-view="offerbook" class="ls-ico-book" role="menuitem">Sổ khớp lệnh</a></li>
+            <li><a href="" data-switch-view="offerbook" class="ls-ico-book" role="menuitem">Sổ lệnh</a></li>
             <li><a href="" data-switch-view="algotrading" class="ls-ico-cog" role="menuitem">Thuật toán cho giao dịch</a></li>
             <li><a href="" data-switch-view="ledger" class="ls-ico-list" role="menuitem">Sổ kế toán</a></li>
 
@@ -759,7 +759,7 @@
 
 <p>Tại sao chúng tôi không giấu mọi thông tin của người dùng, bao gồm cả tên được đặt ngẫu nhiên?</p>
 
-<p>Có rất nhiều lý do giải thích cho việc này nhưng chúng tôi sẽ nêu ra những lý do quan trọng nhất: </p>
+<p>Có rất nhiều lý do giải thích cho việc này nhưng chúng tôi sẽ nêu ra những lý do quan trọng nhất:</p>
 
 <p>1 - Điều này tránh việc thao túng thị trường, như Chạy Trước (Front-running), Bơm và Đẩy (Pump And Dump), và các loại thao túng khác. Bạn có thể thử, nhưng mọi người sẽ biết ngay lập tức và sẽ không thực hiện theo việc thao túng đó. Về cơ bản, việc thao túng thị trường sẽ làm mất tiền của họ, vì vậy mọi người sẽ không để cho việc lũng đoạn thị trường xảy ra.</p>
 
@@ -816,7 +816,7 @@ Chăm sóc khách hàng: Thứ Hai tới thứ Sáu 9 giờ sáng - 6 giờ tố
             </li>
             <li>
               <label class="control-label">Địa chỉ Email</label>
-              <input id="id_signup_email" name="Email" size="30" type="text" placeholder="Ví dụ: phuong@gmail.com">
+              <input id="id_signup_email" name="Email" size="30" type="text" placeholder="Ví dụ: ngoctrinh@gmail.com">
             </li>
             <li>
               <label class="control-label">Mật khẩu</label>
@@ -824,7 +824,7 @@ Chăm sóc khách hàng: Thứ Hai tới thứ Sáu 9 giờ sáng - 6 giờ tố
               <p class="help-block">Ít nhất 8 ký tự</p>
             </li>
             <li>
-              <label class="control-label">Xác nhận mật khẩu của bạn</label>
+              <label class="control-label">Xác nhận mật khẩu</label>
               <input id="id_signup_password2" name="Password2" size="30" type="password">
             </li>
             <li>
@@ -832,7 +832,7 @@ Chăm sóc khách hàng: Thứ Hai tới thứ Sáu 9 giờ sáng - 6 giờ tố
               <select id="id_signup_country" name="country"></select>
             </li>
             <li id="id_signup_state_group" style="display:none">
-              <label class="control-label">Tỉnh/Thành Phố</label>
+              <label class="control-label">Tỉnh/Thành phố</label>
               <select id="id_signup_state" name="state"></select>
             </li>
             <li style="display: none;">
@@ -1046,7 +1046,7 @@ Chăm sóc khách hàng: Thứ Hai tới thứ Sáu 9 giờ sáng - 6 giờ tố
 
       <div id="trading" class="bitex-view">
         <div class="container-fluid">
-          <h1 class="ls-title-intro ls-ico-info">Mua hoặc Bán</h1>
+          <h1 class="ls-title-intro ls-ico-info">Mua và Bán</h1>
         </div>
         <div class="bitex-view-content">
           <div id="trading_order_entry_content" class="row-fluid"></div>
@@ -1064,7 +1064,7 @@ Chăm sóc khách hàng: Thứ Hai tới thứ Sáu 9 giờ sáng - 6 giờ tố
 
       <div id="offerbook" class="bitex-view">
         <div class="container-fluid">
-          <h1 class="ls-title-intro ls-ico-book">Sổ khớp lệnh</h1>
+          <h1 class="ls-title-intro ls-ico-book">Sổ lệnh</h1>
         </div>
         <div class="bitex-view-content">
           <div id="offer_book_order_entry_content" class="row-fluid"></div>
@@ -1169,7 +1169,7 @@ Chăm sóc khách hàng: Thứ Hai tới thứ Sáu 9 giờ sáng - 6 giờ tố
 
       <div id="api" class="bitex-view">
         <div class="section-title">
-          <h3 class="ls-title-intro ls-ico-list">Các Khoá API</h3>
+          <h3 class="ls-title-intro ls-ico-list">Các khoá API</h3>
         </div>
         <div class="content bitex-view-content">
           <div id="id_api_button_group"></div>
@@ -1236,7 +1236,7 @@ Chăm sóc khách hàng: Thứ Hai tới thứ Sáu 9 giờ sáng - 6 giờ tố
                       <a href="#">Latency: <span class="bitex-model" data-model-key="latency">0</span> ms</a>
                     </div>
                     <div class="col-md-1 ls-footer-item">
-                      <a href="#">Version: dbce41a</a>
+                      <a href="#">Version: f296612</a>
                     </div>
                     
                     <div class="col-md-2 ls-footer-item">
@@ -1271,7 +1271,7 @@ Chăm sóc khách hàng: Thứ Hai tới thứ Sáu 9 giờ sáng - 6 giờ tố
                       <a href="#">Latency: <span class="bitex-model" data-model-key="latency">0</span> ms</a>
                     </div>
                     <div class="col-md-1 ls-footer-item">
-                      <a href="#">Version: dbce41a</a>
+                      <a href="#">Version: f296612</a>
                     </div>
                     
                     <div class="col-md-2 ls-footer-item">
