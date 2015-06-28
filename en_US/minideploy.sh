@@ -15,22 +15,21 @@ if [ $# -ge 2 ]; then
 	THEME=$2
 fi
 
-echo "Deploying $LANGUAGE using theme $THEME..."
-
+echo "Deploying $LANG using theme $THEME..."
 git checkout gh-pages
 git pull 
 git checkout master
 ln -s _config.bitcoinvietnam.testnet.yml  _config.yml
 
-echo "Building javascript..."
+echo "Building static resources..."
 cd jsdev
 sh build_release.sh
-echo "done"
 cd ../
 
-git commit -am "Release $LANGUAGE - mini"
+git commit -am "Released $LANG with theme $THEME"
 ./deploy.sh gh-pages ""
 git push origin gh-pages
 git checkout gh-pages
 git branch -D master
 git checkout master
+echo "Done!"
