@@ -41,8 +41,8 @@
     <link href="https://vietnam.blinktrade.com/ro/assets/themes/default/css/Dialog.css" rel="stylesheet">
     <link href="https://vietnam.blinktrade.com/ro/assets/themes/default/css/fuelux.css" rel="stylesheet">
     <link href="https://vietnam.blinktrade.com/ro/assets/themes/default/css/default.uni-form.css" rel="stylesheet">
-    <link href="https://vietnam.blinktrade.com/ro/assets/themes/default/css/style.css?v=7155347" rel="stylesheet">
-    <script data-cfasync="false" src="https://vietnam.blinktrade.com/ro/assets/js/bitex_app_blink_trade.compiled.ro.default.js?v=7155347" type="text/javascript"></script>
+    <link href="https://vietnam.blinktrade.com/ro/assets/themes/default/css/style.css?v=aa263ea" rel="stylesheet">
+    <script data-cfasync="false" src="https://vietnam.blinktrade.com/ro/assets/js/bitex_app_blink_trade.compiled.ro.default.js?v=aa263ea" type="text/javascript"></script>
     
   </head>
   <body class=" ws-not-connected bitex-not-logged active-view-start ">
@@ -247,7 +247,7 @@
  Cu alte cuvinte de fiecare data când Bitcoinii sunt mutați din portofelul cu semnături multiple rece(neconectat la internet) în portofelul cald(conectat la internet), efectuăm o verificare completă a sistemului.</p>
 
 <p>Portofelele calde sunt stocate pe serverele blockchain.info și păstrăm doar cantități mici de bitcoin pentru a efectuă operațiuni de zi cu zi. 
-Mai mult, toate măsurile de siguranță ale portofelelor calde sunt întreținute de blockchain.info</p>
+Mai mult, toate măsurile de siguranță ale portofelelor calde sunt întreținute de blockchain.info </p>
 
 <p>Nici un exchange din lume nu este 100% sigur. Cu toate măsurile noastre de siguranță nu vrem să creăm o comoară de bitcoin, care ar provoca hack-eri să încerce să compromită exchange-ul.</p>
 
@@ -667,6 +667,14 @@ Mai mult, toate măsurile de siguranță ale portofelelor calde sunt întreținu
         <div class="bitex-view-content"></div>
       </div>
 
+
+      <div id="line_of_credit" class="bitex-view">
+        <div class="section-title">
+          <h3 class="bitex-view-title">Linie de credit</h3>
+        </div>
+        <div class="bitex-view-content"></div>
+      </div>
+
       <div id="verification" class="bitex-view">
         <div class="section-title">
           <h3 class="bitex-view-title">Verificare cont</h3>
@@ -721,6 +729,7 @@ Mai mult, toate măsurile de siguranță ale portofelelor calde sunt întreținu
                                                 bitex-view-settings
                                                 bitex-view-algotrading
                                                 bitex-view-api
+                                                bitex-view-line_of_credit 
                                                 bitex-view-my_broker
                                                 bitex-view-verification">
       <h3><span class="bitex-model bitex-view-title" data-model-key="DisplayName"></span></h3>
@@ -800,6 +809,12 @@ Mai mult, toate măsurile de siguranță ale portofelelor calde sunt întreținu
               <i data-switch-view="verification" class="icon-check"></i> Verificați-va contul</a>
           </li>
 
+
+          <li style="" class="bitex-display-if-non-broker bitex-model" style="display: none"  id="line_of_credit_menu_id" data-model-key="HasLineOfCredit" data-model-action="show_element">
+            <a href="" data-switch-view="line_of_credit">
+              <i data-switch-view="line_of_credit" class="icon-retweet"></i> Linie de credit</a>
+          </li>
+
           <li style="">
             <a href="" data-switch-view="faq">
               <i data-switch-view="faq" class="icon-question"></i> Sugestii & Support</a>
@@ -869,7 +884,7 @@ Mai mult, toate măsurile de siguranță ale portofelelor calde sunt întreținu
           
           <a href="" data-switch-view="admin">admin</a> |
           Latency: <span class="bitex-model" data-model-key="latency">0</span> ms |
-          Version: 7155347 |
+          Version: aa263ea |
           
 		      <a href="http://blinktrade.com/" target="_blank">© 2014 BlinkTrade Inc</a>
           | <a href="#themes">Themes</a>
@@ -887,7 +902,9 @@ Mai mult, toate măsurile de siguranță ale portofelelor calde sunt întreținu
         var country_code = "VN";
         var blinktrade_api = "api.testnet.blinktrade.com";
 
-        _app = new BlinkTradeApp(broker_id, country_code );
+        var remittance_box = { 'BRL':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'VEF':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCVEF_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'CLP':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'PKR':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITFINEX_BTCPKR_BEST_BID' ] ] };
+
+        _app = new BlinkTradeApp(broker_id, remittance_box,  country_code );
         _app.run(blinktrade_api);
       })();
     </script>

@@ -43,7 +43,7 @@
 
   
 
-  <script data-cfasync="false" src="https://vietnam.blinktrade.com/assets/js/bitex_app_blink_trade.compiled.vi.whitedev.js?v=7155347" type="text/javascript"></script>
+  <script data-cfasync="false" src="https://vietnam.blinktrade.com/assets/js/bitex_app_blink_trade.compiled.vi.whitedev.js?v=aa263ea" type="text/javascript"></script>
 </head>
 <body class=" ws-not-connected bitex-not-logged active-view-start ">
 
@@ -751,7 +751,7 @@
 
 <p>Tại sao chúng tôi không giấu mọi thông tin của người dùng, bao gồm cả tên được đặt ngẫu nhiên?</p>
 
-<p>Có rất nhiều lý do giải thích cho việc này nhưng chúng tôi sẽ nêu ra những lý do quan trọng nhất:</p>
+<p>Có rất nhiều lý do giải thích cho việc này nhưng chúng tôi sẽ nêu ra những lý do quan trọng nhất: </p>
 
 <p>1 - Điều này tránh việc thao túng thị trường, như Chạy Trước (Front-running), Bơm và Đẩy (Pump And Dump), và các loại thao túng khác. Bạn có thể thử, nhưng mọi người sẽ biết ngay lập tức và sẽ không thực hiện theo việc thao túng đó. Về cơ bản, việc thao túng thị trường sẽ làm mất tiền của họ, vì vậy mọi người sẽ không để cho việc lũng đoạn thị trường xảy ra.</p>
 
@@ -1227,7 +1227,7 @@
                       <a href="#">Latency: <span class="bitex-model" data-model-key="latency">0</span> ms</a>
                     </div>
                     <div class="col-md-1 ls-footer-item">
-                      <a href="#">Version: 7155347</a>
+                      <a href="#">Version: aa263ea</a>
                     </div>
                     
                     <div class="col-md-2 ls-footer-item">
@@ -1262,7 +1262,7 @@
                       <a href="#">Latency: <span class="bitex-model" data-model-key="latency">0</span> ms</a>
                     </div>
                     <div class="col-md-1 ls-footer-item">
-                      <a href="#">Version: 7155347</a>
+                      <a href="#">Version: aa263ea</a>
                     </div>
                     
                     <div class="col-md-2 ls-footer-item">
@@ -1301,7 +1301,9 @@
         var country_code = "VN";
         var blinktrade_api = "api.testnet.blinktrade.com";
 
-        _app = new BlinkTradeApp(broker_id, country_code );
+        var remittance_box = { 'BRL':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'VEF':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCVEF_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'CLP':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'PKR':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITFINEX_BTCPKR_BEST_BID' ] ] };
+
+        _app = new BlinkTradeApp(broker_id, remittance_box,  country_code );
         _app.run(blinktrade_api);
       })();
     </script>
