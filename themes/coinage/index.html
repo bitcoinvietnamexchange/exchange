@@ -38,15 +38,15 @@
   <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 
   
-  <link href="https://vbtc.exchange/assets/themes/default/css/style-new.css?v=5ca4116" rel="stylesheet">
+  <link href="https://vbtc.exchange/assets/themes/default/css/style-new.css?v=9571ee5" rel="stylesheet">
   <link href="https://vbtc.exchange/assets/css/flag-icon.css" rel="stylesheet">
 
   
-    <link href="https://vbtc.exchange/assets/themes/coinage/sass/main.lightgreen.css?v=5ca4116" rel="stylesheet">
+    <link href="https://vbtc.exchange/assets/themes/coinage/sass/main.lightgreen.css?v=9571ee5" rel="stylesheet">
   
 
   <link rel="stylesheet" href="https://vbtc.exchange/assets/themes/coinage/css/font-awesome.min.css">
-  <script data-cfasync="false" src="https://vbtc.exchange/assets/js/bitex_app_blink_trade.compiled.vi.coinage.js?v=5ca4116" type="text/javascript"></script>
+  <script data-cfasync="false" src="https://vbtc.exchange/assets/js/bitex_app_blink_trade.compiled.vi.coinage.js?v=9571ee5" type="text/javascript"></script>
   <script src="https://vbtc.exchange/assets/themes/coinage/javascript/jquery-1.12.0.min.js"></script>
   <script src="https://vbtc.exchange/assets/themes/coinage/javascript/bootstrap.min.js"></script>
   <script src="https://vbtc.exchange/assets/js/externs/qrcode.min.js"></script>
@@ -68,8 +68,8 @@
                     </span>
                     <span class="head-ticker__value">
                       <span class="bitex-model"
-                            data-model-key-list="formatted_BLINK__LAST_PX"
-                            data-model-formula="formatted_BLINK__LAST_PX"
+                            data-model-key-list="formatted_BLINK_BTCVND_LAST_PX"
+                            data-model-formula="formatted_BLINK_BTCVND_LAST_PX"
                             data-blink-class="balance-info-blink"
                         ></span>
                     </span>
@@ -80,8 +80,8 @@
                     </span>
                     <span class="head-ticker__value">
                       <span class="bitex-model"
-                            data-model-key-list="formatted_BLINK__HIGH_PX"
-                            data-model-formula="formatted_BLINK__HIGH_PX"
+                            data-model-key-list="formatted_BLINK_BTCVND_HIGH_PX"
+                            data-model-formula="formatted_BLINK_BTCVND_HIGH_PX"
                             data-blink-class="balance-info-blink"
                         ></span>
                     </span>
@@ -92,8 +92,8 @@
                     </span>
                     <span class="head-ticker__value">
                       <span class="bitex-model"
-                            data-model-key-list="formatted_BLINK__LOW_PX"
-                            data-model-formula="formatted_BLINK__LOW_PX"
+                            data-model-key-list="formatted_BLINK_BTCVND_LOW_PX"
+                            data-model-formula="formatted_BLINK_BTCVND_LOW_PX"
                             data-blink-class="balance-info-blink"
                         ></span>
                     </span>
@@ -104,8 +104,8 @@
                     </span>
                     <span class="head-ticker__value">
                       <span class="bitex-model"
-                            data-model-key-list="formatted_BLINK__VOLUME"
-                            data-model-formula="formatted_BLINK__VOLUME"
+                            data-model-key-list="formatted_BLINK_BTCVND_VOLUME"
+                            data-model-formula="formatted_BLINK_BTCVND_VOLUME"
                             data-blink-class="balance-info-blink"
                         ></span>
                     </span>
@@ -2022,7 +2022,7 @@
                     </li>
                     
                     <li>
-                        Version: 5ca4116
+                        Version: 9571ee5
                     </li>
                     <li>
                         <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
@@ -2099,7 +2099,7 @@
       var broker_id = 3;
       var country_code = "VN";
       var blinktrade_api = "api.blinktrade.com";
-      var symbol = "";
+      var symbol = "BTCVND";
 
       var remittance_box = { 'BRL':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'VEF':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCVEF_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'CLP':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'VND':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VND',  'VND', 'BLINK_BTCVND_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCVND_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] ], 'PKR':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] ] };
 
