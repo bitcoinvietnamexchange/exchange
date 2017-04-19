@@ -38,15 +38,15 @@
   <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 
   
-  <link href="https://vbtc.exchange/assets/themes/default/css/style-new.css?v=f67584a" rel="stylesheet">
+  <link href="https://vbtc.exchange/assets/themes/default/css/style-new.css?v=088ac4a" rel="stylesheet">
   <link href="https://vbtc.exchange/assets/css/flag-icon.css" rel="stylesheet">
 
   
-    <link href="https://vbtc.exchange/assets/themes/coinage/sass/main.lightgreen.css?v=f67584a" rel="stylesheet">
+    <link href="https://vbtc.exchange/assets/themes/coinage/sass/main.lightgreen.css?v=088ac4a" rel="stylesheet">
   
 
   <link rel="stylesheet" href="https://vbtc.exchange/assets/themes/coinage/css/font-awesome.min.css">
-  <script data-cfasync="false" src="https://vbtc.exchange/assets/js/bitex_app_blink_trade.compiled.vi.coinage.js?v=f67584a" type="text/javascript"></script>
+  <script data-cfasync="false" src="https://vbtc.exchange/assets/js/bitex_app_blink_trade.compiled.vi.coinage.js?v=088ac4a" type="text/javascript"></script>
   <script src="https://vbtc.exchange/assets/themes/coinage/javascript/jquery-1.12.0.min.js"></script>
   <script src="https://vbtc.exchange/assets/themes/coinage/javascript/bootstrap.min.js"></script>
   <script src="https://vbtc.exchange/assets/js/externs/qrcode.min.js"></script>
@@ -302,7 +302,30 @@
                 <!-- .home-banner__cell -->
                 <div class="home-banner__cell">
                     
-                    <h1 class="home-banner__title">Mua và bán Bitcoin tại Việt Nam</h1>
+                    <h2 class="home-banner__title">Mua và bán Bitcoin tại Việt Nam</h2>
+
+                   <div class="home-banner__ticker">
+                      <div class="row bitex-display-if-ws-connected">
+                          <div class="col-sm-6">
+                              <h3 class="home-banner__ticker_label">
+                                  Mua
+                              </h3>
+                              <h1 class="bitex-model home-banner__ticker_value"
+                                data-model-key-list="formatted_BLINK_BTCVND_BEST_BID"
+                                data-model-formula="formatted_BLINK_BTCVND_BEST_BID"
+                                data-blink-class="balance-info-blink"></h1>
+                          </div>
+                          <div class="col-sm-6">
+                              <h3 class="home-banner__ticker_label">
+                                  Bán
+                              </h3>
+                              <h1 class="bitex-model home-banner__ticker_value"
+                                data-model-key-list="formatted_BLINK_BTCVND_BEST_ASK"
+                                data-model-formula="formatted_BLINK_BTCVND_BEST_ASK"
+                                data-blink-class="balance-info-blink"></h1>
+                          </div>
+                      </div>
+                   </div>
 
                     <!-- .home-->
                     <div class="col-xs-12 col-sm-8 col-md-6 col-md-offset-3 col-sm-offset-2">
@@ -744,6 +767,8 @@
                                         bitex-view-settings
                                         bitex-view-algotrading
                                         bitex-view-api
+                                        bitex-view-partners
+                                        bitex-view-purseio
                                         bitex-view-my_broker
                                         bitex-view-verification">
 
@@ -759,7 +784,7 @@
 
               <!-- .sidebar-box -->
               <div class="sidebar-box">
-                  <h5 class="sidebar-box__title">NAVEGATION</h5>
+                  <h5 class="sidebar-box__title">Sự đi biển</h5>
 
                   <div class="sidebar-box__body">
                       <ul class="sidebar-box-nav nav">
@@ -781,6 +806,11 @@
                           <li role="presentation" id="menu-offerbook">
                               <a href="#" data-switch-view="offerbook">
                                   <i class="glyphicon glyphicon-book"></i> Sổ lệnh
+                              </a>
+                          </li>
+                          <li role="presentation" id="menu-partners">
+                              <a href="#" data-switch-view="partners">
+                                  <i class="glyphicon glyphicon-shopping-cart"></i> Sử dụng Bitcoin của bạn
                               </a>
                           </li>
                           <li role="presentation" id="menu-history">
@@ -1198,6 +1228,40 @@
                 </div>
                 <!-- /#account_overview -->
 
+                <!-- view partners -->
+                <div id="partners" class="bitex-view">
+                  <header class="page__head section-title">
+                    <h1 class="page__title h2 bitex-view-title">Sử dụng Bitcoin của bạn</h1>
+                  </header>
+                  <div class="page__body bitex-view-content">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="https://vbtc.exchange/assets/exchange_logos/partners/purseio.png" alt="Purse.io">
+                          <div class="caption">
+                            <h3>Purse.io</h3>
+                            <p>Tiết kiệm 15% trên Amazon với Bitcoin</p>
+                            <p>
+                              <a href="https://purse.io/?_a=BLINKTRADE" target="_blank" class="btn btn-primary" role="button">
+                                Hơn
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /view partners -->
+
+                <div id="purseio" class="bitex-view">
+                  <header class="page__head section-title">
+                    <h1 class="page__title h2 bitex-view-title">Purse.io</h1>
+                  </header>
+                  <div class="page__body bitex-view-content">
+                  </div>
+                </div>
+
 
                 <!-- #settings -->
                 <div id="settings" class="bitex-view">
@@ -1282,6 +1346,8 @@
                               bitex-view-settings
                               bitex-view-algotrading
                               bitex-view-api
+                              bitex-view-partners
+                              bitex-view-purseio
                               bitex-view-my_broker
                               bitex-view-verification">
               <!-- .sidebar-box -->
@@ -2019,7 +2085,7 @@
                     </li>
                     
                     <li>
-                        Version: f67584a
+                        Version: 088ac4a
                     </li>
                     <li>
                         <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
@@ -2098,7 +2164,7 @@
       var blinktrade_api = "api.blinktrade.com";
       var symbol = "BTCVND";
 
-      var remittance_box = { 'BRL':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'VEF':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCVEF_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'CLP':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'VND':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VND',  'VND', 'BLINK_BTCVND_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCVND_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] ], 'PKR':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] ] };
+      var remittance_box = { 'BRL':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'VEF':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCVEF_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'CLP':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'VND':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VND',  'VND', 'BLINK_BTCVND_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCVND_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] ], 'PKR':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] ] };
 
       _app = new BlinkTradeApp(broker_id, remittance_box, country_code, symbol);
       _app.run(blinktrade_api);
