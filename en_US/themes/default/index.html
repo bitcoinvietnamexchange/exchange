@@ -43,8 +43,8 @@
     <link href="https://vbtc.exchange/en_US/assets/themes/default/css/Dialog.css" rel="stylesheet">
     <link href="https://vbtc.exchange/en_US/assets/themes/default/css/fuelux.css" rel="stylesheet">
     <link href="https://vbtc.exchange/en_US/assets/themes/default/css/default.uni-form.css" rel="stylesheet">
-    <link href="https://vbtc.exchange/en_US/assets/themes/default/css/style.css?v=1a59c3a" rel="stylesheet">
-    <script data-cfasync="false" src="https://vbtc.exchange/en_US/assets/js/bitex_app_blink_trade.compiled.en_US.default.js?v=1a59c3a" type="text/javascript"></script>
+    <link href="https://vbtc.exchange/en_US/assets/themes/default/css/style.css?v=8d7094a" rel="stylesheet">
+    <script data-cfasync="false" src="https://vbtc.exchange/en_US/assets/js/bitex_app_blink_trade.compiled.en_US.default.js?v=8d7094a" type="text/javascript"></script>
     <script src="https://vbtc.exchange/en_US/assets/js/externs/qrcode.min.js"></script>
     
   </head>
@@ -66,7 +66,11 @@
 
           <ul class="nav navbar-nav pull-right">
             
-            <li><a href="" data-switch-view="faq">FAQ</a></li>
+            <li>
+              
+                <a href="" data-switch-view="faq">FAQ</a>
+              
+            </li>
             <li class="bitex-display-if-logged"><a href="" data-switch-view="offerbook">Trading</a></li>
             <li><a href="" data-switch-view="market">Market</a></li>
             <li class="bitex-hide-if-logged"><a href="" data-switch-view="signin">Sign in</a></li>
@@ -1319,7 +1323,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
           
           <a href="" data-switch-view="admin">admin</a> |
           Latency: <span class="bitex-model" data-model-key="latency">0</span> ms |
-          Version: 1a59c3a |
+          Version: 8d7094a |
           
 		      <a href="http://blinktrade.com/" target="_blank">© 2014 BlinkTrade Inc</a>
           | <a href="#themes">Themes</a>
@@ -1335,12 +1339,10 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
       (function(){
         var broker_id = 3;
         var country_code = "VN";
-        var blinktrade_api = "ws.blinktrade.com";
+        var blinktrade_api = "api.blinktrade.com";
         var symbol = "BTCVND";
 
         var remittance_box = { 'BRL':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'VEF':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCVEF_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'CLP':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'VND':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VND',  'VND', 'BLINK_BTCVND_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCVND_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] ], 'PKR':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] ] };
-
-        alert('Chúng tôi đang được duy trì đến thứ Hai 1:00.   We are under maintenance until Monday 1pm.');
 
         _app = new BlinkTradeApp(broker_id, remittance_box,  country_code, symbol);
         _app.run(blinktrade_api);
@@ -1378,6 +1380,8 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
             type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
     </script>
     <!--End of Zopim Live Chat Script-->
+    
+
     
 
   </body>
