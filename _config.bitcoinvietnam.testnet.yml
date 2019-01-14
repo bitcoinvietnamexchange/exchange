@@ -11,7 +11,7 @@ exchange_logo: "bitcoinvietnam"
 custom_css: 'lightgreen'
 
 twitter_widget_id: "717635114658873344"
-twitter_widget_name: "Bitcoin_Vietnam"
+twitter_widget_name: "vbtc_vietnam"
 twitter_widget_theme: "dark"
 twitter_widget_link_color: "#88DA65"
 
@@ -65,7 +65,7 @@ paginate:    5
 paginate_path: "post/page:num"
 permalink:     /post/:title/
 facebook: https://www.facebook.com/VBTC.vn
-twitter: https://twitter.com/bitcoin_vietnam
+twitter: https://twitter.com/vbtc_vietnam
 youtube: https://www.youtube.com/user/BitcoinVietnam/videos
 
 sass:
